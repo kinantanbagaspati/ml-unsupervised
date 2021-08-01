@@ -1,0 +1,23 @@
+1.
+Unsupervised learning ialah algoritma machine learning yang membaca data namun tanpa diberikan label.
+Dengan kata lain data ini dikelompokkan oleh mesin itu sendiri.
+
+2.
+a.
+DBscan melakukan clustering berdasarkan jarak 2 titik kurang dari epsilon (definisi jarak bisa beragam di n dimensi)
+Untuk memulai cluster, sebuah titik harus memiliki tetangga (titik lain jarak < epsilon) berjumlah lebih dari min_pts
+Setelah itu masukkan semua titik dalam jarak epsilon ke titik dalam cluster hingga queue abis (saya pakai BFS soalnya)
+b.
+- KMeans awalnya memilih k titik random, sebut means.
+- Tiap titik masuk ke kluster sesuai dengan titik means terdekat.
+- Means diubah menjadi rata2 semua titik dalam kluster
+- Poin ke 1-3 diulang hingga means tidak berubah
+- Poin 1-4 bisa diulang hingga mendapat cluster terbaik
+
+3.
+DBscan tidak menjamin semua titik masuk kluster, namun justru sangat baik untuk membuang outlier. Algoritma ini juga tergolong lambat
+KMeans cepat dan sering mendapat klustering terbaik, namun sensitif terhadap outlier
+KMedoids lebih cepat lagi dan tidak sensitif terhadap outlier
+
+4.
+Sesuai definisinya, algoritma unsupervised mengelompokkan data tanpa label, sehingga dapat digunakan untuk pengelompokan situasi dunia nyata secara umum.
